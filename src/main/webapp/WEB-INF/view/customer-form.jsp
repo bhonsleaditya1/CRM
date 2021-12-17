@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
@@ -27,6 +26,8 @@
     <div id="container">
         <h3>Save Customer</h3>
         <form:form action="save-customer" modelAttribute="customer" method="POST">
+<%--            need associate this data with customer id--%>
+            <form:hidden path="id"/>
             <table>
                 <tbody>
                     <tr>

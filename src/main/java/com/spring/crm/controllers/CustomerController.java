@@ -1,15 +1,11 @@
 package com.spring.crm.controllers;
 
-import com.spring.crm.dao.CustomerDAO;
 import com.spring.crm.entity.Customer;
 import com.spring.crm.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,8 +27,8 @@ public class CustomerController {
 
         return "list-customers";
     }
-    @GetMapping("/show-form-for-add")
-    public String showFormForAdd(Model model){
+    @GetMapping("/show-form-add")
+    public String showFormAdd(Model model){
 
         // create model attribute to bind data
         Customer customer = new Customer();
@@ -45,6 +41,15 @@ public class CustomerController {
         //save customer
         customerService.saveCustomer(customer);
         return "redirect:/customer/list";
+    }
+    @GetMapping("/show-form-update")
+    public String showFormUpdate(@RequestParam("customerId") int id,Model model){
+        // get customer form database
+        Customer customer = customerService.getCustomer(id);
+        // set customer model attribute to pre-populate form
+        model.addAttribute("customer",customer);
+        //send over to form
+        return "customer-form";
     }
 }
 

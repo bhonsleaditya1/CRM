@@ -6,7 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -39,7 +38,16 @@ public class CustomerDAOImpl implements CustomerDAO{
         // get current hibernate session
         Session session = sessionFactory.getCurrentSession();
 
-        // save customer
-        session.save(customer);
+        // save/update customer
+        session.saveOrUpdate(customer);
+    }
+
+    @Override
+    public Customer getCustomer(int id) {
+        // get current hibernate session
+        Session session = sessionFactory.getCurrentSession();
+        // retrive/read from database using primary key
+        Customer customer = session.get(Customer.class,id);
+        return customer;
     }
 }
