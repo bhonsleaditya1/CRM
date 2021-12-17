@@ -20,6 +20,11 @@
 		</div>
 		<div id="container">
 			<div id="content">
+<%--				add new button: Add Customer--%>
+				<input type="button" value="Add Customer"
+					onclick="window.location.href='show-form-for-add';return false;"
+				   class="add-button"
+				/>
 <%--				add out html table here--%>
 				<table>
 					<tr>
