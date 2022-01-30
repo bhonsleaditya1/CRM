@@ -23,7 +23,7 @@
 			<div id="content">
 <%--				add new button: Add Customer--%>
 				<input type="button" value="Add Customer"
-					onclick="window.location.href='show-form-for-add';return false;"
+					onclick="window.location.href='show-form-add';return false;"
 				   class="add-button"
 				/>
 			<form:form action="search" method="GET">

@@ -1,9 +1,9 @@
-DROP DATABASE web_customer_tracker;
+/* DROP DATABASE web_customer_tracker;
 drop user springstudent;
 CREATE USER springstudent with password 'springstudent';
 CREATE DATABASE web_customer_tracker;
 
-\connect web_customer_tracker springstudent;
+\connect web_customer_tracker springstudent; */
 
 DROP TABLE IF EXISTS customer;
 CREATE TABLE customer (

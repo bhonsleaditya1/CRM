@@ -2,8 +2,8 @@
 /.gradle/
 /build/
 /build/classes/java/main/
-.gradle
-.idea
+/.idea/
+/gradle/
 out
 *.iml
 *.ipr
@@ -11,3 +11,4 @@ out
 .DS_Store
 .env
 /target/
+/.vscode/
