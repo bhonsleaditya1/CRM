@@ -4,10 +4,10 @@
 /build/classes/java/main/
 .gradle
 .idea
-/target/
 out
 *.iml
 *.ipr
 *.iws
 .DS_Store
 .env
+/target/

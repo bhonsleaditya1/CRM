@@ -2,7 +2,6 @@ package com.spring.jdbc;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.URISyntaxException;
 import java.net.URI;
 
 import javax.servlet.ServletException;
