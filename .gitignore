@@ -4,6 +4,7 @@
 /build/classes/java/main/
 .gradle
 .idea
+/target/
 out
 *.iml
 *.ipr
